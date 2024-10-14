@@ -3,13 +3,15 @@
 	margin: 0;
 	padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 .top-header {
-    background-color:rgba(52, 219, 216, 0.7);
+    background-color:	#2c8654;
     color: #fff;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    row-gap: none;
+    align-items:end;
     padding: 15px 20px;
     
 }
@@ -22,8 +24,17 @@
     color: #fff;
     justify-content: space-between;
 }
+.logo {
+    background-color:#2c8654;
+}
+.logo img {
+   
+    width: 300px;
+    height: 80px;
+    margin: 15px,;
+}
 .navigation {
-    background-color: aquamarine;
+    background-color:#2c8654;
     color: black;
     display: flex;
     padding: 10px 0;
@@ -45,6 +56,7 @@
     object-fit: cover;
 }
 .Why-us {
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,15 +67,19 @@
 .hero-card {
    position: absolute;
    width: 30%;
-   height: auto;
+   height: 30%;
     gap: 5px;
     top: 40%;
     right: 10%;
     color: darkslategray;
     background-color: rgba(255, 255, 255, 0.6);
-    padding: 10px;
+    padding: 30px, 30px;
+    margin: 30px, 30px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.hero-card p {
+    font-size: larger;
 }
 .hero-card button {
     width: 50%;
@@ -89,7 +105,7 @@
 .hero-card2 {
     width: 45%;
    position: absolute;
-    top: 20%;
+    top: 30%;
     left: 10%;
     background-color: rgba(255, 255, 255, 0.3);
     padding: 30px;
@@ -127,7 +143,7 @@
     height: 100%;
     width: 100%;
     margin-bottom: 20px;
-    background-color: rgba(141, 23, 23, 0.3); 
+    background-color: rgba(18, 230, 25, 0.116); 
     color: darkslategray;
     font-size: 24px;
   
@@ -137,7 +153,7 @@
    /* position: absolute;*/
     height: 100%;
     width: 100%;
-    background-color: rgba(141, 23, 23, 0.3); 
+    background-color: rgba(18, 230, 25, 0.116); 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -153,7 +169,7 @@
     border-radius: 5px;
     color: darkslategray;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(18, 230, 25, 0.116); 
     border: solid;
    padding:30px, 30px;
    margin: 30px, 30px;
@@ -193,12 +209,16 @@
     background-color: rgb(17, 140, 99) ;
     color: white;
 }
-/* CSS */
+.contact-form-container img{
+    width: 40px;
+    height: 40px;
+}
+
 .contact-form-container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(18, 230, 25, 0.116); 
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -240,11 +260,11 @@
 
 .form-group input:focus, 
 .form-group textarea:focus {
-    border-color: #4CAF50;
+    border-color: 	#3CB371;
 }
 
 .form-group span {
-    color: red;
+    color: 	#3CB371;
 }
 
 .contact-form button {
@@ -261,4 +281,87 @@
 .contact-form button:hover {
     background-color: #45a049;
 }
+.contact-forms {
+    display: fllex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items:center;
+}
+.navigation h2 {
+    position: relative;
+    padding: 10px, 20px;
+    margin: 0px, 10px;
+    gap: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+.navigation h2::before {
+    content: " Kontaktai: tel. numeris 069382882, el. paštas info@saukla.lt, adresas: Mažeikiai, Gamyklos g. 33A ";
+    display: inline-block;
+    width: 100%;
+}
+
+.navigation h2 {
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.navigation h3 {
+    position: relative;
+    padding: 10px, 20px;
+    margin: 0px, 10px;
+    gap: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navigation h3::before {
+    content: " Kontaktai: tel. numeris 069382882, el. paštas info@saukla.lt, adresas: Mažeikiai, Gamyklos g. 33A ";
+    display: inline-block;
+    width: 100%;
+}
+
+.navigation h3 {
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+.contact-form-container2 {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(18, 230, 25, 0.116); 
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form-container2 h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+.contact-form-overlay {
+
+    position: absolute;
+}
+.card2-items img {
+    width: 40px;
+    height: 40px;
+}
+html {
+    scroll-behavior: smooth;
+}
