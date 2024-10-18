@@ -12,12 +12,12 @@
     flex-direction: row;
     row-gap: none;
     align-items:end;
-    padding: 15px 20px;
     
 }
 .top-header h1{
    
-    font-size: 24px;
+    font-size: 12px;
+    color: #333;
 }
 .top-header a{
     text-decoration: none;
@@ -31,13 +31,12 @@
    
     width: 300px;
     height: 80px;
-    margin: 15px,;
+   
 }
 .navigation {
     background-color:#2c8654;
     color: black;
     display: flex;
-    padding: 10px 0;
     justify-content: center;
 }
 .navigation a {
@@ -68,39 +67,37 @@
    position: absolute;
    width: 30%;
    height: 30%;
-    gap: 5px;
-    top: 40%;
+    top: 30%;
     right: 10%;
     color: darkslategray;
     background-color: rgba(255, 255, 255, 0.6);
-    padding: 30px, 30px;
-    margin: 30px, 30px;
+    padding: 15px;
     border-radius: 5px;
+    text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 .hero-card p {
     font-size: larger;
 }
-.hero-card button {
+.hero-card a {
     width: 50%;
     padding: 30px 30px;
-    margin: 20px;
+    margin: 20px 20px;
     background-color: rgba(255, 255, 255, 0.6);
     border: 5px bold;
     border-radius: 5px;
     cursor: pointer;
     color: darkslategray;
     text-transform: uppercase;
-   /*display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;*/
+    text-decoration: none;
 
 }
-.hero-card button:hover{
+.hero-card a:hover{
     transition:  background-color 0.3s;
     background-color: rgb(17, 140, 99) ;
     color: white;
+    text-decoration: underline;
 }
 .hero-card2 {
     width: 45%;
@@ -117,6 +114,8 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 .card2-items {
+    width: 80%;
+    height: 100%;
     background-color: rgba(240, 240, 240, 0.6);
     padding: 15px;
     border-radius: 5px;
@@ -146,11 +145,9 @@
     background-color: rgba(18, 230, 25, 0.116); 
     color: darkslategray;
     font-size: 24px;
-  
- }
- 
- .services-card {
-   /* position: absolute;*/
+    
+}
+.services-card {
     height: 100%;
     width: 100%;
     background-color: rgba(18, 230, 25, 0.116); 
@@ -160,8 +157,7 @@
     justify-content:space-around;
     align-items: center;
     row-gap: 30px;
-   
- }
+}
 .card3-item {
     width: 600px;
     height: 400px;
@@ -171,9 +167,31 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     background-color: rgba(18, 230, 25, 0.116); 
     border: solid;
-   padding:30px, 30px;
-   margin: 30px, 30px;
+    padding:30px, 30px;
+    margin: 30px, 30px;
 }
+.card3-itemcover {
+    width:100%;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    color: darkslategray;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(18, 230, 25, 0.116); 
+    border: solid;
+    padding:30px, 30px;
+    margin: 30px, 30px;
+}
+.card3-itemcover h1 h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+
+ }
+ .card3-itemcover p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;  
+ }
 .card3-item img {
     width: 35%;
     height: 55%;
@@ -185,23 +203,21 @@
     margin-bottom: 15px;
     font-size: 24px;
 }
-
 .card3-item p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
-
 .card3-item button {
-    width: 50%;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 30px 40px;
     background-color: rgba(255, 255, 255, 0.6);
     border:5px bold;
     border-radius: 5px;
     cursor: pointer;
     color: darkslategray;
     text-transform: uppercase;
-    margin: 10px, 10px;
+    margin:30px, 30px;
 }
 
 .card3-item button:hover{
@@ -213,34 +229,32 @@
     width: 40px;
     height: 40px;
 }
-
 .contact-form-container {
-    max-width: 600px;
+    position:absolute;
+    width: 500px;
+    left: 900px;
+    top: 60%;
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(18, 230, 25, 0.116); 
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
 .contact-form-container h2 {
     margin-bottom: 20px;
     font-size: 1.8em;
     color: #333;
 }
-
 .contact-form {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
 }
-
 .form-group {
     display: flex;
     flex-direction: column;
 }
-
 .form-group label {
     margin-bottom: 5px;
     font-size: 1em;
@@ -282,10 +296,10 @@
     background-color: #45a049;
 }
 .contact-forms {
-    display: fllex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items:center;
 }
 .navigation h2 {
@@ -293,6 +307,8 @@
     padding: 10px, 20px;
     margin: 0px, 10px;
     gap: 15px;
+    display: flex;
+    flex-direction: row;
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
@@ -300,8 +316,10 @@
 }
 
 .navigation h2::before {
-    content: " Kontaktai: tel. numeris 069382882, el. paštas info@saukla.lt, adresas: Mažeikiai, Gamyklos g. 33A ";
+    content: " ";
     display: inline-block;
+    flex-direction: row;
+    row-gap: 8px;
     width: 100%;
 }
 
@@ -362,6 +380,105 @@
     width: 40px;
     height: 40px;
 }
-html {
+.html {
     scroll-behavior: smooth;
+}
+.footer {
+    background-color:	#2c8654;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    row-gap: none;
+    align-items:center;
+    gap: 20px;
+    padding: 15px 20px;
+    margin: 20px, 20px ;
+    
+}
+.footer a{
+    text-decoration: none;
+    color: #fff;
+    justify-content: space-between;
+}
+.privacypolicy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 30px, 30px;
+    margin: 30px, 30px;
+   
+}
+.privacypolicy h1, h2{
+    text-decoration: solid;
+    align-items: center;
+    text-align: center;
+  
+}
+
+.privacypolicy p {
+    color: #333;
+    gap: 16px;
+    text-align: center;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.contactmain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.contact {
+    position: relative;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(18, 230, 25, 0.116); 
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+   
+}
+.contact h1 h2 p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
 }
