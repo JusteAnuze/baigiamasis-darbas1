@@ -16,11 +16,19 @@
      </div>
      <div class="logo">
         <img src="logo.png" alt="logo">
-     </div>
-     <div class="navigation">
-        <a href="apiemus.html">Apie mus</a>
-        <a href="#paslaugos">Paslaugos</a>
-        <a href="contact.html">Kontaktai</a>
+     
+     <nav class="navigation">
+        <ul class="nav-links">
+        <li><a href="apiemus.html">Apie mus</a></li>
+        <li><a href="#paslaugos">Paslaugos</a></li>
+        <li><a href="contact.html">Kontaktai</a></li>
+        </ul>
+     </nav>
+         <div class="burger-menu" onclick="toggleMenu()">
+         <div class="line"></div>
+         <div class="line"></div>
+         <div class="line"></div>
+         </div>
      </div>
     </header>
     <main>
@@ -63,23 +71,35 @@
             <form class="contact-form" action="#" method="post">
                 <div class="form-group">
                     <label for="name">Vardas</label>
-                    <input type="text" id="name" name="name" placeholder="Įveskite savo vardą">
+                    <input type="text" id="textInput" name="name" placeholder="Įveskite savo vardą">
                 </div>
                 <div class="form-group">
-                    <label for="city">Miestas <span>*</span></label>
-                    <input type="text" id="city" name="city" placeholder="Įveskite savo miestą" required>
+                    <label for="city">Miestas</label>
+                    <select id="citySelect" onchange="handleCityChange()">
+                        <option value="">Pasirinkite miestą</option>
+                        <option value="Klaipėda">Klaipėda</option>
+                        <option value="Palanga">Palanga</option>
+                        <option value="Skuodas">Skuodas</option>
+                        <option value="Mažeikiai">Mažeikiai</option>
+                        <option value="Plungė">Plungė</option>
+                        <option value="Rietavas">Rietavas</option>
+                        <option value="Telšiai">Telšiai</option>
+                        <option value="Akmenė">Akmenė</option>
+                        <option value="Šiauliai">Šiauliai</option>
+                        <option value="Kita">Kita</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="phone">Telefono numeris <span>*</span></label>
-                    <input type="number" id="phone" name="phone" placeholder="Įveskite savo telefono numerį" required>
+                    <input type="number" id="phoneInput" name="phone" placeholder="Įveskite savo telefono numerį" required>
                 </div>
                 <div class="form-group">
                     <label for="email">El. paštas <span>*</span></label>
-                    <input type="email" id="email" name="email" placeholder="Įveskite savo el. paštą" required>
+                    <input type="email" id="emailInput" name="email" placeholder="Įveskite savo el. paštą" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Žinutė</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Įveskite savo žinutę"></textarea>
+                    <textarea id="messageInput" name="message" rows="5" placeholder="Įveskite savo žinutę"></textarea>
                 </div>
                 <button type="submit">Siųsti</button>
             </form>
@@ -89,15 +109,12 @@
             <h1>Mūsų atliekamos paslaugos</h1>
         </div>
             <div class="services-card">
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                         <img src="pic7.jpg" alt="leveling-the-plot">
-                          <H2> SKLYPO LYGINIMAS</H2>
-                         <p>Vienas iš svarbiausių darbų susijusių su kokybišku vejos įrengimu yra sklypo lyginimas.</p>
-                         <a href="sklypolyginimas.html" class="card3-item button" >Sužinoti daugiau</a> 
-                    </div>     
-             </div>
+               <div class="card3-item">
+               <img src="pic7.jpg" alt="leveling-the-plot">
+               <h2> SKLYPO LYGINIMAS</h2>
+               <p>Vienas iš svarbiausių darbų susijusių su kokybišku vejos įrengimu yra sklypo lyginimas.</p>
+               <a href="sklypolyginimas.html" class="card3-item button" >Sužinoti daugiau</a> 
+               </div>     
              <div class="card3-item">
                 <img src="pic3.jpg" alt="soil-preparation-for-lawns">
                 <h2>DIRVOS PARUOŠIMAS VEJAI</h2>
@@ -125,35 +142,7 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div id="contact" class="contact-form-container">
-        <h2>Susisiekite su mumis</h2>
-        <a href="https://www.facebook.com/vejosirengimas"> <img src="https://th.bing.com/th/id/OIP.-NlF9-lDk4zCh-JTA4JaiAHaHa?rs=1&pid=ImgDetMain" alt="Facebook"></a>
-        <a href="www.gmail.com"> <img src="https://www.mappingmegan.com/wp-content/uploads/2017/01/icon-email-icon-clip-art-at-clker-com-vector-qafaq-e-mail-icon-trace-0.png" alt="GMAIL"></a>
-        <form class="contact-form" action="#" method="post">
-            <div class="form-group">
-                <label for="name">Vardas</label>
-                <input type="text" id="name" name="name" placeholder="Įveskite savo vardą">
-            </div>
-            <div class="form-group">
-                <label for="city">Miestas <span>*</span></label>
-                <input type="text" id="city" name="city" placeholder="Įveskite savo miestą" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Telefono numeris <span>*</span></label>
-                <input type="number" id="phone" name="phone" placeholder="Įveskite savo telefono numerį" required>
-            </div>
-            <div class="form-group">
-                <label for="email">El. paštas <span>*</span></label>
-                <input type="email" id="email" name="email" placeholder="Įveskite savo el. paštą" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Žinutė</label>
-                <textarea id="message" name="message" rows="5" placeholder="Įveskite savo žinutę"></textarea>
-            </div>
-            <button type="submit">Siųsti</button>
-        </form>
-    </div>
+    
     <footer>
     <div class="footer">
         <a href="privacypolicy.html">Privatumo politika</a>
